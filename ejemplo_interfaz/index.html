@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AACI - Asistente de Aprendizaje</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header & Accessibility Controls -->
+        <header class="app-header">
+            <div class="header-info">
+                <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                <h1>AACI <span class="subtitle">Tu Tutor Inteligente</span></h1>
+            </div>
+            <div class="accessibility-controls">
+                <button id="btn-decrease-text" class="icon-btn" aria-label="Reducir texto" title="Reducir texto"><i class="fa-solid fa-a" style="font-size: 0.8em;"></i>-</button>
+                <button id="btn-increase-text" class="icon-btn" aria-label="Aumentar texto" title="Aumentar texto"><i class="fa-solid fa-a"></i>+</button>
+                <button id="btn-read-aloud" class="icon-btn" aria-label="Leer en voz alta" title="Leer último mensaje"><i class="fa-solid fa-volume-high"></i></button>
+            </div>
+        </header>
+
+        <!-- Chat Area -->
+        <main class="chat-area" id="chat-area">
+            <!-- Initial Greeting -->
+            <div class="message ai-message">
+                <div class="message-content">
+                    <p>¡Hola! Soy AACI, tu asistente de aprendizaje. Hoy estamos repasando el tema de <strong>Ciencias e Historia</strong>. ¿Qué te gustaría aprender o repasar?</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="input-area">
+            <form id="chat-form" class="chat-form">
+                <input type="text" id="user-input" placeholder="Escribe tu pregunta aquí..." required autocomplete="off">
+                <button type="submit" id="btn-send" class="send-btn" aria-label="Enviar mensaje"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
